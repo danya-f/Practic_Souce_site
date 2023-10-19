@@ -37,13 +37,15 @@ def test_burger_about():
 
 def test_burger_reset_app():
     driver = webdriver.Chrome()
-    log_in(driver)
+    login_and_add_2_item(driver)
 
     burger_menu = driver.find_element(By.XPATH , BURGER_MENU)
     burger_menu.click()
     sleep(1)
-
     reset_app_button = driver.find_element(By.XPATH , RESET_APP_BUTTON)
-
+    reset_app_button.click()
     sleep(1)
-    assert reset_app_button.is_enabled() and reset_app_button.is_displayed()
+    add_item = driver.find_element(By.XPATH , ADD_TO_CART_3).click()
+    sleep(2)
+    count_items_on_cart = driver.find_element(By.XPATH , XPATH_ITEMS_ON_SHOPPING_CART)
+    assert count_items_on_cart.text == '1'

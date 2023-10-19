@@ -16,7 +16,6 @@ def log_in(driver):
 
     login_button = driver.find_element(By.CSS_SELECTOR, ID_LOGIN_BUTTON)
     login_button.click()
-
     sleep(1)
 
     assert driver.current_url == 'https://www.saucedemo.com/inventory.html'

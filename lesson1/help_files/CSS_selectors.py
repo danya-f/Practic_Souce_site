@@ -4,6 +4,7 @@ ID_PASSWORD = '#password'
 ID_LOGIN_BUTTON = '#login-button'
 ID_ADD_TO_CART_1 = '#add-to-cart-sauce-labs-bolt-t-shirt'
 ID_ADD_TO_CART_2 = '#add-to-cart-sauce-labs-backpack'
+ADD_TO_CART_3 = "//button[@id = 'add-to-cart-test.allthethings()-t-shirt-(red)']"
 ID_REMOVE_FROM_CART = '#remove-sauce-labs-bike-light'
 XPATH_SHOPPING_CART = "//*[@class = 'shopping_cart_link']"
 XPATH_ITEMS_ON_SHOPPING_CART = "//span[@class ='shopping_cart_badge']"
