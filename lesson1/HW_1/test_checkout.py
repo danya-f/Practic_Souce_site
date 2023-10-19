@@ -1,7 +1,6 @@
 from lesson1.help_files.functions import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from faker import Faker
 
 def test_checkout():
     driver = webdriver.Chrome()

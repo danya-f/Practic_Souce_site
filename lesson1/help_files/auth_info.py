@@ -10,5 +10,5 @@ visual_user_login = 'visual_user'
 password = 'secret_sauce'
 firstname = fake.name().split()[0]
 lastname = fake.name().split()[1]
-
 zipcode = fake.zipcode()
+
