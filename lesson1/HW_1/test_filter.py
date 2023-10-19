@@ -44,15 +44,5 @@ def test_filter_high_low():
     first_item_price = driver.find_element(By.XPATH, PRICE_ITEMS_ON_CATALOG)
     assert first_item_price.text == f'${str(sorted(item_price)[-1])}'
 
-def test_inventory_list():
-    driver = webdriver.Chrome()
-    log_in(driver)
-
-    push_filter_high_low(driver)
-    sleep(1)
-    item_names = list(list_names_items_on_page(driver))
-    print(item_names)
-    item_price = list(list_price_items_on_page(driver))
-    print(item_price)
 
 
