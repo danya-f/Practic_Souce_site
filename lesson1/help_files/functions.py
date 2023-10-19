@@ -1,8 +1,7 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
-from auth_info import *
-from CSS_selectors import *
+from lesson1.help_files.auth_info import *
+from lesson1.help_files.CSS_selectors import *
 
 
 def log_in(driver):

@@ -1,10 +1,6 @@
+from lesson1.help_files.functions import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from time import sleep
-from auth_info import *
-from CSS_selectors import *
-from functions import *
-
 
 
 def test_add_item():
