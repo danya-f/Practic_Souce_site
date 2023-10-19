@@ -19,7 +19,7 @@ def test_login_form():
     login_button = driver.find_element(By.CSS_SELECTOR , ID_LOGIN_BUTTON )
     login_button.click()
 
-    sleep(5)
+    sleep(2)
 
     assert driver.current_url == 'https://www.saucedemo.com/inventory.html'
     driver.close()
@@ -38,7 +38,7 @@ def test_login_form_uncorrect_log_pass():
     login_button = driver.find_element(By.CSS_SELECTOR , ID_LOGIN_BUTTON )
     login_button.click()
 
-    sleep(5)
+    sleep(2)
 
     assert driver.current_url != 'https://www.saucedemo.com/inventory.html'
     driver.quit()
