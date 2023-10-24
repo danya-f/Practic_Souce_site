@@ -1,20 +1,19 @@
 from selenium.webdriver.common.by import By
 from time import sleep
 from lesson1.help_files.auth_info import *
-from lesson1.help_files.CSS_selectors import *
-from faker import Faker
+from lesson1.help_files.selectors import *
 
 
 def log_in(driver):
-    driver.get('https://www.saucedemo.com/')
+    driver.get(MAIN_PAGE)
 
-    username_field = driver.find_element(By.CSS_SELECTOR, ID_USER_NAME)
+    username_field = driver.find_element(By.CSS_SELECTOR, USER_NAME)
     username_field.send_keys(standart_login)
 
-    password_field = driver.find_element(By.CSS_SELECTOR, ID_PASSWORD)
+    password_field = driver.find_element(By.CSS_SELECTOR, PASSWORD)
     password_field.send_keys(password)
 
-    login_button = driver.find_element(By.CSS_SELECTOR, ID_LOGIN_BUTTON)
+    login_button = driver.find_element(By.CSS_SELECTOR, LOGIN_BUTTON)
     login_button.click()
     sleep(1)
 

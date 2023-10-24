@@ -1,7 +1,15 @@
 
-ID_USER_NAME =  '#user-name'
-ID_PASSWORD = '#password'
-ID_LOGIN_BUTTON = '#login-button'
+
+
+
+#AUTH_PAGE
+USER_NAME =  '#user-name'
+PASSWORD = '#password'
+LOGIN_BUTTON = '#login-button'
+
+
+
+
 ID_ADD_TO_CART_1 = '#add-to-cart-sauce-labs-bolt-t-shirt'
 ID_ADD_TO_CART_2 = '#add-to-cart-sauce-labs-backpack'
 ADD_TO_CART_3 = "//button[@id = 'add-to-cart-test.allthethings()-t-shirt-(red)']"
