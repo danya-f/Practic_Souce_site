@@ -1,4 +1,3 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
 from lesson1.help_files.auth_info import *
@@ -6,39 +5,33 @@ from lesson1.help_files.selectors import *
 
 
 
-def test_login_form():
-    driver = webdriver.Chrome()
-    driver.get('https://www.saucedemo.com/')
 
-    username_field = driver.find_element(By.CSS_SELECTOR , USER_NAME)
-    username_field.send_keys(standart_login)
+def test_login_form(driver):
+    driver.get(MAIN_PAGE)
+    assert driver.current_url == MAIN_PAGE
 
-    password_field = driver.find_element(By.CSS_SELECTOR, PASSWORD)
-    password_field.send_keys(password)
+    driver.find_element(By.CSS_SELECTOR , USER_NAME).send_keys(standart_login)
 
-    login_button = driver.find_element(By.CSS_SELECTOR , LOGIN_BUTTON )
-    login_button.click()
+    driver.find_element(By.CSS_SELECTOR, PASSWORD).send_keys(password)
+
+    driver.find_element(By.CSS_SELECTOR , LOGIN_BUTTON ).click()
 
     sleep(2)
 
-    assert driver.current_url == 'https://www.saucedemo.com/inventory.html'
-    driver.close()
+    assert driver.current_url == URL_AFTER_LOGIN
 
 
-def test_login_form_uncorrect_log_pass():
-    driver = webdriver.Chrome()
-    driver.get('https://www.saucedemo.com/')
+def test_login_form_incorrect_log_pass(driver):
 
-    username_field = driver.find_element(By.CSS_SELECTOR , USER_NAME)
-    username_field.send_keys('user')
+    driver.get(MAIN_PAGE)
+    assert driver.current_url == MAIN_PAGE
 
-    password_field = driver.find_element(By.CSS_SELECTOR, PASSWORD)
-    password_field.send_keys('user')
+    driver.find_element(By.CSS_SELECTOR , USER_NAME).send_keys('user12')
 
-    login_button = driver.find_element(By.CSS_SELECTOR , LOGIN_BUTTON )
-    login_button.click()
+    driver.find_element(By.CSS_SELECTOR, PASSWORD).send_keys('user')
+
+    driver.find_element(By.CSS_SELECTOR , LOGIN_BUTTON ).click()
 
     sleep(2)
 
-    assert driver.current_url != 'https://www.saucedemo.com/inventory.html'
-    driver.quit()
+    assert driver.current_url != URL_AFTER_LOGIN

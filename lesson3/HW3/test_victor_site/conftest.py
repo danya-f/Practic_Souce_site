@@ -8,7 +8,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 def chrome_options():
     options = Options()
     options.add_argument('--headless')
-    # options.add_argument('--start-maximized')
     return options
 
 

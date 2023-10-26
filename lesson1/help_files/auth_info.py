@@ -13,14 +13,15 @@ visual_user_login = 'visual_user'
 
 password = 'secret_sauce'
 
-#FAKE_BUYER_NAME
-firstname = fake.name().split()[0]
-lastname = fake.name().split()[1]
-zipcode = fake.zipcode()
-
 
 #URLS
 MAIN_PAGE = 'https://www.saucedemo.com/'
+URL_AFTER_LOGIN = 'https://www.saucedemo.com/inventory.html'
+URL_CART = 'https://www.saucedemo.com/cart.html'
+ONESIE_ITEM_CARD = "https://www.saucedemo.com/inventory-item.html?id=2"
+URL_1STEP_CHECKOUT = "https://www.saucedemo.com/checkout-step-one.html"
+URL_2STEP_CHECKOUT = 'https://www.saucedemo.com/checkout-step-two.html'
+
 
 
 

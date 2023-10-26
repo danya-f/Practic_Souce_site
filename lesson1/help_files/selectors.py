@@ -41,4 +41,5 @@ LOGOUT_BUTTON_FROM_BURGER_MENU = "//a[@id = 'logout_sidebar_link']"
 ABOUT_BUTTON_FROM_BURGER_MENU = "//a[@id = 'about_sidebar_link']"
 ICON_ON_ABOUT_SITE = "//*[@class = 'MuiBox-root css-mntjpt']"
 RESET_APP_BUTTON = "//a[@id = 'reset_sidebar_link']"
+CONFIRM_ORDER_TEXT = "//h2[@class = 'complete-header']"
 
