@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 
 
+
 @pytest.fixture()
 def chrome_options():
     options = Options()
